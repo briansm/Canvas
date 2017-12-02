@@ -1,3 +1,5 @@
+var texto=document.getElementById("txtlineas");
+var btn=document.getElementById("boton");
 var d=document.getElementById("candib");
 var lienzo=d.getContext("2d");
 var lineas=30;
