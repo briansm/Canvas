@@ -3,17 +3,6 @@ var btn=document.getElementById("boton");
 btn.addEventListener("click",dibujoPorclick);
 var d=document.getElementById("candib");
 var lienzo=d.getContext("2d");
-var lineas=30;
-var xf,yi;
-var colorcito="#FAA";
-
-for(l=0;l<lineas;l++){
-  yi=10*l;
-  xf=10*(l+1)
-  dibujarline(colorcito,0,yi,xf,300);
-}
-dibujarline(colorcito,1,1,1,299);
-dibujarline(colorcito,1,299,299,299);
 
 function dibujarline(color,xini,xfin,yini,yfin){
   lienzo.beginPath();
@@ -23,6 +12,19 @@ function dibujarline(color,xini,xfin,yini,yfin){
   lienzo.stroke();
   lienzo.closePath();
 }
+
 function dibujoPorclick(){
-alert("NO ME TOQUES AHI");
+  var cat=parseInt(texto.value);
+  var lineas=cat;
+  var xf,yi;
+  var colorcito="#FAA";
+
+  for(l=0;l<lineas;l++){
+    yi=10*l;
+    xf=10*(l+1)
+    dibujarline(colorcito,0,yi,xf,300);
+  }
+  dibujarline(colorcito,1,1,1,299);
+  dibujarline(colorcito,1,299,299,299);
+
 }
