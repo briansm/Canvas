@@ -1,5 +1,6 @@
 var texto=document.getElementById("txtlineas");
 var btn=document.getElementById("boton");
+btn.addEventListener("click",dibujoPorclick);
 var d=document.getElementById("candib");
 var lienzo=d.getContext("2d");
 var lineas=30;
@@ -21,4 +22,7 @@ function dibujarline(color,xini,xfin,yini,yfin){
   lienzo.lineTo(xfin,yfin);
   lienzo.stroke();
   lienzo.closePath();
+}
+function dibujoPorclick(){
+alert("NO ME TOQUES AHI");
 }
